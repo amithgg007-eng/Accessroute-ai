@@ -1,0 +1,32 @@
+ACCESSROUTE AI - BUILDING ACCESSIBILITY FEATURE
+
+Files:
+1. App.jsx - updated main React app, preserving existing route/barrier/auth/community features and adding building accessibility integration.
+2. BuildingAccessibility.jsx - building report form, building cards, accessibility details, photos, search and community verification.
+3. server.cjs - backend with existing auth/barrier/community APIs plus /api/buildings APIs and SQLite migrations.
+
+INSTALL/USE:
+1. Replace your existing src/App.jsx with App.jsx.
+2. Put BuildingAccessibility.jsx inside src/.
+3. Replace server/server.cjs with server.cjs.
+4. Keep your existing Map.jsx and Auth.jsx.
+5. Make sure better-sqlite3, express and cors are installed.
+6. Start backend from the server folder:
+   node server.cjs
+7. Start React:
+   npm run dev
+
+NEW BUILDING FEATURE:
+- Report Building
+- Click exact building location on existing Leaflet map
+- Building name/type/description
+- Lift, ramp, accessible entrance, accessible toilet, accessible parking, stairs
+- Floor-level accessibility notes
+- Photo upload with 5 MB validation
+- Community verification: Still accurate / Information changed
+- Building accessibility score
+- Search building reports
+- Automatically shows the closest community building report when a searched destination is close to one
+
+IMPORTANT:
+The existing Map.jsx is intentionally preserved. The building report uses the existing map click callback, so no Map.jsx replacement is required for the core feature.
